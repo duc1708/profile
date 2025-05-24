@@ -26,12 +26,6 @@ body {
   text-align: center;
 }
 
-.intro {
-  font-size: 16px;
-  margin-bottom: 24px;
-  font-family: Helvetica;
-  color: #3a434e;
-}
 
 .card {
   background: url(images/background_profile.png), linear-gradient(154.23deg, #FFFFFF -32.05%, #FFC288 10.34%, #FF8410 55.95%, #FF6F20 85.71%);
@@ -45,7 +39,7 @@ body {
 .card-content {
   display: flex;
   align-items: center;
-  padding: 32px;
+  padding: 20px 40px;
   position: relative;
 }
 
@@ -55,86 +49,60 @@ body {
 }
 
 .profile-pic img {
-  width: 112px;
-  height: 112px;
+  width: 150px;
+  height: 150px;
   border-radius: 9999px;
-  border: 2px solid white;
+  border: 1px solid white;
   object-fit: cover;
 }
 
+
+
+
 .profile-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translate(12px, 12px);
-  background: white;
-  color: var(--primary-color);
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
-  padding: 8px 12px;
-  border-radius: 12px 12px 12px 0;
-  line-height: 1.2;
-  max-width: 140px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    transform: translate(12px, 12px);
+    background: url(images/quote.png);
+    width: 139px;
+    height: 58px;
+    background-size: cover;
+    padding: 8px 12px;
 }
 
-.profile-pic::after {
-  content: "";
-  position: absolute;
-  bottom: 24px;
-  left: 0;
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 50%;
-}
 
 .info {
-  margin-left: 32px;
-  color: white;
-  flex: 1;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 215px;
+  top: 50px;
 }
 
-.info h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  margin: 0 0 4px;
+.info h2, p{
+  margin: 5px 0px;
 }
 
-.info p {
-  font-size: 18px;
+.info h2{
+  font-family: Lora;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.info p{
+  font-family: Helvetica;
+  font-size: 22px;
   font-weight: 300;
-  margin: 0;
 }
 
-.save-button {
-  display: flex;
-  align-items: center;
-  background: white;
-  color: #1f2937;
-  font-weight: 600;
-  padding: 12px 20px;
-  border-radius: 10px;
-  margin-left: 24px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.2s ease-in-out;
-}
-
-.save-button:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.save-button i {
-  margin-right: 12px;
-}
 
 .icon-email,
 .icon-message,
-.icon-calendar {
-  border-radius: 6px;
-  width: 40px;
-  height: 40px;
+.icon-calendar,
+.icon-website,
+.icon-linked {
+  width: 30px;
+  height: 30px;
   background-repeat: no-repeat;
   background-size: auto;
 }
@@ -150,10 +118,17 @@ body {
   background-image: url(images/icon_calendar.png);
 }
 
+.icon-website{
+  background-image: url(images/icon_website.png);
+}
+
+.icon-linked{
+  background-image: url(images/icon_linked.png);
+}
+
 .arrow-box {
   background-image: url(images/Button.Icons.png);
 }
-
 
 .btn-phone {
   background-image: url(images/icon_phone.png);
@@ -184,14 +159,14 @@ button{
   font-size: 18px;
   cursor: pointer;
 }
-/* bio */
-
 
 
 section, aside {
-  max-width: 520px;
+  max-width: 495px;
   margin: 0 auto 32px;
   padding: 0 16px;
+  height: auto;
+  min-height: 60px;
 }
 
 aside .contact-card {
@@ -210,12 +185,9 @@ section h2 {
 }
 
 aside {
-  max-width: 520px;
   display: flex;
   gap: 1rem;
 }
-
-
 
 .contact-card {
   background: white;
@@ -240,10 +212,6 @@ aside {
   gap: 16px;
 }
 
-.contact-card .left i {
-  color: var(--secondary-color);
-  font-size: 18px;
-}
 
 .contact-card .left {
   flex: 1 1 auto;
@@ -257,29 +225,32 @@ aside {
 .contact-card .left div p {
   word-break: break-word;
   overflow-wrap: break-word;
+} 
+
+.contact-card .left p{
+  color: #3a434e;
+  font-size: 16px;
+  font-family: Helvetica;
+  font-weight: 400;
 }
 
 
 .contact-card .left div p:first-child {
-  color: #3a434e;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: Helvetica;
   margin: 0;
 }
 
 .contact-card .left div p:last-child {
   color: #98a6be;
-  font-size: 16px;
   margin: 0;
-  font-family: Helvetica;
 }
 
 .footer-text {
-  font-size: 12px;
-  color: var(--secondary-color);
+  font-size: 14px;
+  color: rgba(152, 166, 190, 1);
   text-align: center;
   margin-bottom: 24px;
+  font-family: Helvetica;
+  font-weight: 400;
 }
 
 @media (max-width: 600px) {
@@ -288,30 +259,41 @@ aside {
   }
 
   .card-content {
-    flex-direction: column;
     text-align: center;
   }
 
-  .info {
-    margin-left: 0;
-    margin-top: 16px;
-  }
+.info {
+        left: 200px;
+        top: 40px;
+    }
+
+.info h2{
+  font-size: 20px;
+}
+
+.info p{
+  font-size: 16px;
+}
 
   .save-button {
     margin-top: 16px;
   }
 
   .profile-caption {
-    left: 50%;
-    transform: translate(-50%, 12px);
+        left: 137%;
+        transform: translate(-50%, -14px);
+        background: url(images/quote_mobile.png);
+        width: 169px;
+        height: 55px;
+        background-size: contain;
+        background-repeat: no-repeat;
   }
 
   .profile-pic::after {
     left: 50%;
     transform: translateX(-50%);
   }
-  .contact-card .left div p:first-child,
-  .contact-card .left div p:last-child {
+  .contact-card p {
     font-size: 14px;
   }
 }
@@ -321,9 +303,10 @@ aside {
     padding: 10px 12px;
   }
 
-  .contact-card .left div p:first-child,
-  .contact-card .left div p:last-child {
+  .contact-card .left p {
     font-size: 13px;
   }
 }
+
+
 
