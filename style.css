@@ -166,7 +166,6 @@ section,
 aside {
   max-width: 495px;
   margin: 0 auto 32px;
-  padding: 0 16px;
   height: auto;
   min-height: 60px;
 }
@@ -176,6 +175,7 @@ aside .contact-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0px 15px;
 }
 
 section h2 {
@@ -198,9 +198,9 @@ aside {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
+  padding: 15px 15px;
   border-radius: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.2s;
 }
@@ -292,6 +292,7 @@ aside {
     text-align: center;
     padding: 20px 20px 100px 20px;
   }
+
 
   .info {
     left: 180px;
