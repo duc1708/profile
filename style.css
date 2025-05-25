@@ -28,15 +28,20 @@ body {
   text-align: center;
 }
 
-
 .card {
-  background: url(images/background_profile.png), linear-gradient(154.23deg, #FFFFFF -32.05%, #FFC288 10.34%, #FF8410 55.95%, #FF6F20 85.71%);
+  background: url(images/background_profile.png),
+    linear-gradient(
+      154.23deg,
+      #ffffff -32.05%,
+      #ffc288 10.34%,
+      #ff8410 55.95%,
+      #ff6f20 85.71%
+    );
   background-repeat: no-repeat;
   border-radius: 24px;
   overflow: hidden;
   margin-bottom: 40px;
 }
-
 
 .card-content {
   display: flex;
@@ -58,21 +63,17 @@ body {
   object-fit: cover;
 }
 
-
-
-
 .profile-caption {
-    position: absolute;
-    bottom: 0;
-    left: -20px;
-    transform: translate(12px, 12px);
-    background: url(images/quote.png);
-    width: 139px;
-    height: 58px;
-    background-size: cover;
-    padding: 8px 12px;
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  transform: translate(12px, 12px);
+  background: url(images/quote.png);
+  width: 139px;
+  height: 58px;
+  background-size: cover;
+  padding: 8px 12px;
 }
-
 
 .info {
   color: rgba(255, 255, 255, 1);
@@ -81,22 +82,22 @@ body {
   top: 50px;
 }
 
-.info h2, p{
+.info h2,
+p {
   margin: 5px 0px;
 }
 
-.info h2{
+.info h2 {
   font-family: Lora;
   font-size: 26px;
   font-weight: 700;
 }
 
-.info p{
+.info p {
   font-family: Helvetica;
   font-size: 22px;
   font-weight: 300;
 }
-
 
 .icon-email,
 .icon-message,
@@ -120,11 +121,11 @@ body {
   background-image: url(images/icon_calendar.png);
 }
 
-.icon-website{
+.icon-website {
   background-image: url(images/icon_website.png);
 }
 
-.icon-linked{
+.icon-linked {
   background-image: url(images/icon_linked.png);
 }
 
@@ -140,11 +141,11 @@ body {
   background-image: url(images/icon_zalo.png);
 }
 
-.arrow-up{
-  background-image: url(images/arrow-up.png)
+.arrow-up {
+  background-image: url(images/arrow-up.png);
 }
 
-button{
+button {
   background-color: #fff;
 }
 
@@ -162,8 +163,8 @@ button{
   cursor: pointer;
 }
 
-
-section, aside {
+section,
+aside {
   max-width: 495px;
   margin: 0 auto 32px;
   padding: 0 16px;
@@ -214,7 +215,6 @@ aside {
   gap: 16px;
 }
 
-
 .contact-card .left {
   flex: 1 1 auto;
   min-width: 0;
@@ -227,15 +227,14 @@ aside {
 .contact-card .left div p {
   word-break: break-word;
   overflow-wrap: break-word;
-} 
+}
 
-.contact-card .left p{
+.contact-card .left p {
   color: #3a434e;
   font-size: 16px;
   font-family: Helvetica;
   font-weight: 400;
 }
-
 
 .contact-card .left div p:first-child {
   margin: 0;
@@ -256,8 +255,7 @@ aside {
 }
 
 @media (max-width: 600px) {
-
-  body{
+  body {
     background-size: auto;
   }
   .contact-card {
@@ -269,31 +267,36 @@ aside {
     padding: 20px;
   }
 
-.info {
-        left: 180px;
-        top: 40px;
-    }
+  aside .icon-website {
+    width: 50px;
+    height: 35px;
+  }
 
-.info h2{
-  font-size: 17px;
-}
+  .info {
+    left: 180px;
+    top: 40px;
+  }
 
-.info p{
-  font-size: 15px;
-}
+  .info h2 {
+    font-size: 17px;
+  }
+
+  .info p {
+    font-size: 15px;
+  }
 
   .save-button {
     margin-top: 16px;
   }
 
   .profile-caption {
-        left: 137%;
-        transform: translate(-50%, -14px);
-        background: url(images/quote_mobile.png);
-        width: 169px;
-        height: 55px;
-        background-size: contain;
-        background-repeat: no-repeat;
+    left: 137%;
+    transform: translate(-50%, -14px);
+    background: url(images/quote_mobile.png);
+    width: 169px;
+    height: 55px;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .profile-pic::after {
@@ -314,6 +317,3 @@ aside {
     font-size: 13px;
   }
 }
-
-
-
