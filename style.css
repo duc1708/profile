@@ -256,16 +256,21 @@ aside {
 }
 
 @media (max-width: 600px) {
+
+  body{
+    background-size: auto;
+  }
   .contact-card {
     padding: 12px 14px;
   }
 
   .card-content {
     text-align: center;
+    padding: 20px;
   }
 
 .info {
-        left: 200px;
+        left: 180px;
         top: 40px;
     }
 
