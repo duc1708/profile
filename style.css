@@ -297,6 +297,15 @@ aside {
         left: 2rem;
   }
 
+  .profile-caption {
+            left: 137%;
+        transform: translate(-50%, -70px);
+        background: url(images/quote_mobile.png);
+        width: 169px;
+        height: 55px;
+        background-size: contain;
+        background-repeat: no-repeat;
+  }
   
 
   aside .icon-website {
@@ -321,15 +330,7 @@ aside {
     margin-top: 16px;
   }
 
-  .profile-caption {
-            left: 137%;
-        transform: translate(-50%, -70px);
-        background: url(images/quote_mobile.png);
-        width: 169px;
-        height: 55px;
-        background-size: contain;
-        background-repeat: no-repeat;
-  }
+  
 
   .profile-pic::after {
     left: 50%;
@@ -347,5 +348,26 @@ aside {
 
   .contact-card .left p {
     font-size: 13px;
+  }
+
+  .card-content {
+    text-align: center;
+    padding: 20px;
+    height: 26vh;
+  }
+
+  .save-contact {
+    top: 11.5rem;
+        left: 2rem;
+  }
+
+  .profile-caption {
+            left: 137%;
+        transform: translate(-50%, -70px);
+        background: url(images/quote_mobile.png);
+        width: 169px;
+        height: 55px;
+        background-size: contain;
+        background-repeat: no-repeat;
   }
 }
