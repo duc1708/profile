@@ -16,8 +16,7 @@ body {
   background-size: contain;
 }
 
-/* Rectangle 1 */
-
+/* Container */
 .container {
   width: 100%;
   max-width: 600px;
@@ -28,6 +27,7 @@ body {
   text-align: center;
 }
 
+/* Card */
 .card {
   background: url(images/background_profile.png),
     linear-gradient(
@@ -62,6 +62,7 @@ body {
   object-fit: cover;
 }
 
+/* Profile caption */
 .profile-caption {
   position: absolute;
   bottom: 0;
@@ -74,16 +75,17 @@ body {
   padding: 8px 12px;
 }
 
+/* Info */
 .info {
-  color: rgba(255, 255, 255, 1);
+  color: #fff;
   position: absolute;
   left: 215px;
   top: 50px;
 }
 
 .info h2,
-p {
-  margin: 5px 0px;
+.info p {
+  margin: 5px 0;
 }
 
 .info h2 {
@@ -98,15 +100,25 @@ p {
   font-weight: 300;
 }
 
+/* Icons */
 .icon-email,
 .icon-message,
 .icon-calendar,
 .icon-website,
-.icon-linked {
+.icon-linked,
+.arrow-box,
+.btn-phone,
+.btn-zalo,
+.arrow-up {
   width: 35px;
   height: 35px;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-position: center;
+  background-size: cover;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .icon-email {
@@ -116,6 +128,7 @@ p {
 .icon-message {
   background-image: url(images/icon_message.png);
 }
+
 .icon-calendar {
   background-image: url(images/icon_calendar.png);
 }
@@ -148,20 +161,7 @@ button {
   background-color: #fff;
 }
 
-.arrow-box,
-.arrow-up,
-.btn-phone,
-.btn-zalo {
-  background-size: cover;
-  background-position: center;
-  width: 35px;
-  height: 35px;
-  border: none;
-  border-radius: 8px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
+/* Sections */
 section,
 aside {
   max-width: 495px;
@@ -186,11 +186,13 @@ section h2 {
   font-weight: 400;
 }
 
+/* Aside */
 aside {
   display: flex;
   gap: 1rem;
 }
 
+/* Contact card */
 .contact-card {
   background: white;
   display: flex;
@@ -207,25 +209,27 @@ aside {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Save contact */
 .save-contact {
-    background: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 12px;
-    position: absolute;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.2s;
-    gap: 5rem;
-    top: 8rem;
-    left: 13.5rem;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 12px;
+  position: absolute;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+  gap: 5rem;
+  top: 8rem;
+  left: 13.5rem;
 }
 
 .save-contact:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Flex groups */
 .contact-card .left,
 .contact-card .right,
 .save-contact .left,
@@ -268,6 +272,7 @@ aside {
   margin: 0;
 }
 
+/* Footer */
 .footer-text {
   font-size: 14px;
   color: rgba(152, 166, 190, 1);
@@ -277,6 +282,7 @@ aside {
   font-weight: 400;
 }
 
+/* Mobile responsiveness */
 @media (max-width: 600px) {
   body {
     background-size: auto;
@@ -284,33 +290,7 @@ aside {
 
   .card-content {
     text-align: center;
-    padding: 20px;
-    height: 26vh;
-  }
-
-  .contact-card {
-    padding: 12px 14px;
-  }
-
-  .save-contact {
-    top: 11.5rem;
-        left: 2rem;
-  }
-
-  .profile-caption {
-            left: 137%;
-        transform: translate(-50%, -70px);
-        background: url(images/quote_mobile.png);
-        width: 169px;
-        height: 55px;
-        background-size: contain;
-        background-repeat: no-repeat;
-  }
-  
-
-  aside .icon-website {
-    width: 50px;
-    height: 35px;
+    padding: 20px 20px 100px 20px;
   }
 
   .info {
@@ -326,48 +306,33 @@ aside {
     font-size: 15px;
   }
 
-  .save-button {
-    margin-top: 16px;
-  }
-
-  
-
-  .profile-pic::after {
+  .profile-caption {
     left: 50%;
-    transform: translateX(-50%);
-  }
-  .contact-card p {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 400px) {
-  .contact-card {
-    padding: 10px 12px;
-  }
-
-  .contact-card .left p {
-    font-size: 13px;
-  }
-
-  .card-content {
-    text-align: center;
-    padding: 20px;
-    height: 26vh;
+    transform: translate(15%, -15px);
+    background: url(images/quote_mobile.png);
+    width: 169px;
+    height: 55px;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .save-contact {
-    top: 11.5rem;
-        left: 2rem;
+    left: 0%;
+    transform: translate(5%, 55px);
+    gap: 6rem;
   }
 
-  .profile-caption {
-            left: 137%;
-        transform: translate(-50%, -70px);
-        background: url(images/quote_mobile.png);
-        width: 169px;
-        height: 55px;
-        background-size: contain;
-        background-repeat: no-repeat;
+  .contact-card {
+    padding: 12px 14px;
+  }
+
+  .contact-card p {
+    font-size: 14px;
+  }
+
+  aside .icon-website {
+    width: 50px;
+    height: 35px;
   }
 }
+/*  */
