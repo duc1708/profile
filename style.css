@@ -341,34 +341,6 @@ aside {
   }
 }
 
-@media (max-width: 350px) {
-  .contact-card {
-    padding: 10px 12px;
-  }
 
-  .contact-card .left p {
-    font-size: 13px;
-  }
 
-  .card-content {
-    text-align: center;
-    padding: 20px;
-    height: 39vh;
-  }
 
-  .save-contact {
-    top: 11.5rem;
-    left: 2rem;
-    gap: 2rem
-  }
-
-  .profile-caption {
-            left: 137%;
-        transform: translate(-50%, -70px);
-        background: url(images/quote_mobile.png);
-        width: 169px;
-        height: 55px;
-        background-size: contain;
-        background-repeat: no-repeat;
-  }
-}
