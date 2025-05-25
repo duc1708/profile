@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-size: contain;
 }
 
 /* Rectangle 1 */
@@ -20,6 +21,7 @@ body {
 .container {
   width: 100%;
   max-width: 600px;
+  margin-top: 2rem;
 }
 
 .text-center {
@@ -101,8 +103,8 @@ body {
 .icon-calendar,
 .icon-website,
 .icon-linked {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background-repeat: no-repeat;
   background-size: auto;
 }
@@ -268,11 +270,11 @@ aside {
     }
 
 .info h2{
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .info p{
-  font-size: 16px;
+  font-size: 15px;
 }
 
   .save-button {
