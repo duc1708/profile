@@ -4,28 +4,32 @@
   --bg-gradient: linear-gradient(to bottom, #d9dde3, #f0f1f3, #d9dde3);
 }
 
+.text-center {
+  text-align: center;
+}
+
+
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-  background: url(images/Rectangle\ 2.png),
+  background: url(images/background_main.png),
     linear-gradient(227.89deg, #ccd1db 0%, #e5e7e9 56.91%, #ffffff 100.1%);
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-size: contain;
+  min-height: 100dvh;
+
 }
 
 /* Container */
 .container {
   width: 100%;
   max-width: 600px;
-  margin-top: 2rem;
 }
 
-.text-center {
-  text-align: center;
-}
 
 /* Card */
 .card {
@@ -89,7 +93,7 @@ body {
 }
 
 .info h2 {
-  font-family: Lora;
+  font-family: 'Lora';
   font-size: 26px;
   font-weight: 700;
 }
@@ -98,6 +102,26 @@ body {
   font-family: Helvetica;
   font-size: 22px;
   font-weight: 300;
+}
+
+/* Save contact */
+.save-contact {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+  border-radius: 12px;
+  position: absolute;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+  gap: 5rem;
+  top: 8rem;
+  left: 13.5rem;
+}
+
+.save-contact:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Icons */
@@ -121,12 +145,15 @@ body {
   cursor: pointer;
 }
 
+/* Icon button */
 .arrow-box,
 .btn-phone,
 .btn-zalo,
 .arrow-up {
   background-size: contain;
 }
+
+/* Background of Icons */
 .icon-contact {
   background-image: url(images/icon_contact.png);
 }
@@ -171,7 +198,7 @@ button {
   background-color: #fff;
 }
 
-/* Sections */
+/* Section and aside */
 section,
 aside {
   max-width: 495px;
@@ -226,25 +253,7 @@ aside {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Save contact */
-.save-contact {
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 15px;
-  border-radius: 12px;
-  position: absolute;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.2s;
-  gap: 5rem;
-  top: 8rem;
-  left: 13.5rem;
-}
 
-.save-contact:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
 
 /* Flex groups */
 .contact-card .left,
@@ -388,4 +397,3 @@ aside {
     height: 35px;
   }
 }
-/*  */
