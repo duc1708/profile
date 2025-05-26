@@ -101,6 +101,7 @@ body {
 }
 
 /* Icons */
+.icon-contact,
 .icon-email,
 .icon-message,
 .icon-calendar,
@@ -114,11 +115,20 @@ body {
   height: 35px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
   border: none;
   border-radius: 8px;
   font-size: 18px;
   cursor: pointer;
+}
+
+.arrow-box,
+.btn-phone,
+.btn-zalo,
+.arrow-up {
+  background-size: contain;
+}
+.icon-contact {
+  background-image: url(images/icon_contact.png);
 }
 
 .icon-email {
@@ -170,6 +180,12 @@ aside {
   min-height: 60px;
 }
 
+.title {
+  max-width: 495px;
+  margin: 0 auto 0px;
+  height: auto;
+}
+
 aside .contact-card {
   width: 100%;
   display: flex;
@@ -178,7 +194,8 @@ aside .contact-card {
   padding: 0px 15px;
 }
 
-section h2 {
+section h2,
+.title h2 {
   font-size: 16px;
   color: #98a6be;
   margin-bottom: 8px;
@@ -198,7 +215,7 @@ aside {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 15px;
+  padding: 10px 15px;
   border-radius: 12px;
   margin-bottom: 15px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -215,7 +232,7 @@ aside {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0px 15px;
   border-radius: 12px;
   position: absolute;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -256,6 +273,12 @@ aside {
   overflow-wrap: break-word;
 }
 
+.save-contact .left p {
+  font-family: Helvetica;
+  font-weight: 700;
+  color: rgba(58, 67, 78, 1);
+}
+
 .contact-card .left p {
   color: #3a434e;
   font-size: 16px;
@@ -293,7 +316,6 @@ aside {
     padding: 20px 20px 100px 20px;
   }
 
-
   .info {
     left: 180px;
     top: 40px;
@@ -321,18 +343,48 @@ aside {
     left: 0%;
     transform: translate(5%, 55px);
     gap: 6rem;
+    padding: 5px 20px;
+    width: 90%;
+    box-sizing: border-box;
+  }
+
+  aside,
+  section,
+  .title {
+    padding: 0px 20px;
+  }
+
+  aside {
+    gap: 5px;
+  }
+
+  .contact-card .left,
+  .contact-card .right,
+  .save-contact .left,
+  .save-contact .right {
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 
   .contact-card {
     padding: 12px 14px;
   }
 
+  .save-contact p {
+    font-size: 12px;
+  }
+
   .contact-card p {
     font-size: 14px;
   }
 
+  .contact-card .left p {
+    font-size: 12px;
+  }
+
   aside .icon-website {
-    width: 50px;
+    width: 40px;
     height: 35px;
   }
 }

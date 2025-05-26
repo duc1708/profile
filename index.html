@@ -26,16 +26,16 @@
           </p>
         </div>
         <div class="save-contact" >
-        <div class="left">
-            <span class="icon-message"></span>
-            <div>
-                <p>Save this contact</p>
-            </div>
+          <div class="left">
+              <span class="icon-contact"></span>
+              <div>
+                  <p>Save this contact</p>
+              </div>
+          </div>
+          <div class="right">
+              <button id="btn-save-contact" class="arrow-box"></button>
+          </div>
         </div>
-        <div class="right">
-            <button class="btn-phone"></button>
-        </div>
-      </div>
       </div>
     </div>
 
@@ -51,7 +51,7 @@
                 <p>bruno.senouci@drcomgroup.com</p>
             </div>
         </div>
-        <button class="arrow-box"></button>
+        <button id="send-email" class="arrow-box"></button>
       </div>
 
       <div class="contact-card" >
@@ -63,8 +63,8 @@
             </div>
         </div>
         <div class="right">
-            <button class="btn-phone"></button>
-            <button class="btn-zalo"></button>
+            <button id="phone" class="btn-phone"></button>
+            <button id="zalo" class="btn-zalo"></button>
         </div>
       </div>
     </section>
@@ -77,19 +77,24 @@
                 <span class="icon-calendar"></span>
                 <p>Request for a calendar invite</p>
             </div>
-            <button class="arrow-box"></button>
+            <button id="rq-calendar" class="arrow-box"></button>
         </div>
     </section>
 
     <!-- More from DRcom -->
-    
+    <div class="title">
+      <h2>
+        MORE FROM DRCOM
+      </h2>
+    </div>
     <aside>
+
       <div class="contact-card" href="#">
             <div class="left">
                 <span class="icon-website"></span>
                 <p>Visit our website</p>
             </div>
-            <button class="arrow-up">
+            <button id="vs-website" class="arrow-up">
             </button>
       </div>
       <div class="contact-card" href="#">
@@ -97,7 +102,7 @@
                 <span class="icon-linked"></span>
                 <p>Follow us</p>
             </div>
-            <button class="arrow-up">
+            <button id="fl-us" class="arrow-up">
             </button>
         </div>
     </aside>
