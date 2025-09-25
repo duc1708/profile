@@ -1,103 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bruno Senouci Namecard</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+
+</head>
+<script src="script.js"></script>
+
+
+<body>
     <div class="container">
-      <p class="text-center intro">Hi there! It’s great to connect with you.</p>
+        <p class="text-center intro">Hi there! It’s great to connect with you.</p>
 
-      <!-- Personal information -->
-      <div class="card">
-        <div class="card-content">
-          <div class="profile-pic">
-            <img src="images/avt.png" alt="Bruno Senouci" />
-            <div class="profile-caption"></div>
-          </div>
-          <div class="info">
-            <h2 class="name">Bruno Senouci</h2>
-            <p class="position">Chief Operations Officer</p>
-          </div>
-          <div class="save-contact">
-            <div class="left">
-              <span class="icon-contact"></span>
-              <div>
-                <p>Save this contact</p>
-              </div>
+        <!-- Personal information -->
+        <div class="card">
+            <div class="card-content">
+                <div class="profile-pic">
+                    <img src="images/avt.png" alt="Bruno Senouci" />
+                    <div class="profile-caption"></div>
+                </div>
+                <div class="info">
+                    <h2 class="name">Bruno Senouci</h2>
+                    <p class="position">Chief Operations Officer</p>
+                </div>
+                <div class="save-contact">
+                    <div class="left">
+                        <span class="icon-contact"></span>
+                        <div>
+                            <p>Save this contact</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <button id="btn-save-contact" class="arrow-box"></button>
+                    </div>
+                </div>
             </div>
-            <div class="right">
-              <button id="btn-save-contact" class="arrow-box"></button>
+        </div>
+
+        <!-- Get in touch -->
+        <section>
+            <h2>GET IN TOUCH</h2>
+            <div class="contact-card">
+                <div class="left">
+                    <span class="icon-email"></span>
+                    <div>
+                        <p>Send me an email</p>
+                        <p>bruno.senouci@drcomgroup.com</p>
+                    </div>
+                </div>
+                <button id="send-email" class="arrow-box"></button>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Get in touch -->
-      <section>
-        <h2>GET IN TOUCH</h2>
-        <div class="contact-card">
-          <div class="left">
-            <span class="icon-email"></span>
-            <div>
-              <p>Send me an email</p>
-              <p>bruno.senouci@drcomgroup.com</p>
+            <div class="contact-card">
+                <div class="left">
+                    <span class="icon-message"></span>
+                    <div>
+                        <p>Message me</p>
+                        <p>+84 285 437 1208</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <button id="phone" class="btn-phone"></button>
+                    <button id="zalo" class="btn-zalo"></button>
+                </div>
             </div>
-          </div>
-          <button id="send-email" class="arrow-box"></button>
-        </div>
 
-        <div class="contact-card">
-          <div class="left">
-            <span class="icon-message"></span>
-            <div>
-              <p>Message me</p>
-              <p>+84 285 437 1208</p>
+            <div class="contact-card" id="profile-linked">
+                <div class="left">
+                    <span class="icon-linked"></span>
+                    <div>
+                        <p>View My Profile</p>
+                        <p></p>
+                    </div>
+                </div>
+                <a id="linkedin-btn" target="_blank">
+                    <button id="view-linked" class="arrow-box"></button>
+                </a>
             </div>
-          </div>
-          <div class="right">
-            <button id="phone" class="btn-phone"></button>
-            <button id="zalo" class="btn-zalo"></button>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Let's have a chat -->
-      <section>
-        <h2>LET'S HAVE A CHAT</h2>
-        <div class="contact-card" href="#">
-          <div class="left">
-            <span class="icon-calendar"></span>
-            <p>Request for a calendar invite</p>
-          </div>
-          <button id="rq-calendar" class="arrow-box"></button>
-        </div>
-      </section>
+        <!-- Let's have a chat -->
+        <section>
+            <h2>LET'S HAVE A CHAT</h2>
+            <div class="contact-card" href="#">
+                <div class="left">
+                    <span class="icon-calendar"></span>
+                    <p>Request for a calendar invite</p>
+                </div>
+                <button id="rq-calendar" class="arrow-box"></button>
+            </div>
+        </section>
 
-      <!-- More from DRcom -->
-      <div class="title">
-        <h2>MORE FROM DRCOM</h2>
-      </div>
-      <aside>
-        <div class="contact-card" href="#">
-          <div class="left">
-            <span class="icon-website"></span>
-            <p>Visit our website</p>
-          </div>
-          <button id="vs-website" class="arrow-up"></button>
+        <!-- More from DRcom -->
+        <div class="title">
+            <h2>MORE FROM DRCOM</h2>
         </div>
-        <div class="contact-card" href="#">
-          <div class="left">
-            <span class="icon-linked"></span>
-            <p>Follow us</p>
-          </div>
-          <button id="fl-us" class="arrow-up"></button>
-        </div>
-      </aside>
+        <aside>
+            <div class="contact-card" href="#">
+                <div class="left">
+                    <span class="icon-website"></span>
+                    <p>Visit our website</p>
+                </div>
+                <button id="vs-website" class="arrow-up"></button>
+            </div>
+            <div class="contact-card" href="#">
+                <div class="left">
+                    <span class="icon-linked"></span>
+                    <p>Follow us</p>
+                </div>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <button id="fl-us" class="arrow-up"></button>
+                </a>
+            </div>
+        </aside>
 
-      <p class="footer-text">For business use only.</p>
+        <p class="footer-text">For business use only.</p>
     </div>
-  </body>
+</body>
+
+</html>
+</body>
+
+</html>
+</body>
+
 </html>
