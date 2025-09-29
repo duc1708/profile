@@ -9,43 +9,31 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     var profileWeb = "https://www.linkedin.com/in/" + username;
-    var profileIOS = "linkedin://in/" + username;
-    var profileAndroid =
-        "intent://in/" + username +
-        "#Intent;package=com.linkedin.android;scheme=https;end";
+    var profileApp = "linkedin://in/" + username; // dùng chung cho iOS & Android
 
     var ua = navigator.userAgent || navigator.vendor || window.opera;
     var isAndroid = /Android/i.test(ua);
     var isIOS = /iPhone|iPad|iPod/i.test(ua);
-
 
     linkEl.setAttribute("href", profileWeb);
 
     linkEl.addEventListener("click", function(e) {
         e.preventDefault();
 
-        if (isIOS) {
-            // iOS → thử mở app bằng iframe
-            var iframe = document.createElement("iframe");
-            iframe.style.display = "none";
-            iframe.src = profileIOS;
-            document.body.appendChild(iframe);
-
-            setTimeout(function() {
-                window.location = profileWeb;
-            }, 1500);
-        } else if (isAndroid) {
-            // Android → thử mở app, nếu thất bại thì fallback sau 1s
+        if (isIOS || isAndroid) {
+            // thử mở app
             var start = Date.now();
-            window.location = profileAndroid;
+            window.location = profileApp;
 
             setTimeout(function() {
+                // nếu trong ~1.2s chưa mở app thì fallback về web
                 if (Date.now() - start < 1200) {
                     window.location = profileWeb;
                 }
             }, 1000);
         } else {
-            window.location = profileWeb;
+            // desktop → mở web luôn
+            window.open(profileWeb, "_blank");
         }
     });
 });
