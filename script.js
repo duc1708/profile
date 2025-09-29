@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     var username = "khanh-pham-45688b275";
+
     var card = document.getElementById("profile-linked");
     var linkEl = document.getElementById("linkedin-btn");
 
@@ -9,24 +10,36 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     var profileWeb = "https://www.linkedin.com/in/" + username;
-    var profileApp = "linkedin://in/" + username;
+    var profileIOS = "linkedin://in/" + username;
+    var profileAndroid =
+        "intent://in/" + username +
+        "#Intent;package=com.linkedin.android;scheme=https;end";
 
     var ua = navigator.userAgent || navigator.vendor || window.opera;
-    var isMobile = /Android|iPhone|iPad|iPod/i.test(ua);
+    var isAndroid = /Android/i.test(ua);
+    var isIOS = /iPhone|iPad|iPod/i.test(ua);
 
-    // tránh mở web ngay lập tức
-    linkEl.setAttribute("href", "#");
+    linkEl.setAttribute("href", profileWeb);
 
     linkEl.addEventListener("click", function(e) {
         e.preventDefault();
 
-        if (isMobile) {
+        if (isIOS) {
+            var iframe = document.createElement("iframe");
+            iframe.style.display = "none";
+            iframe.src = profileIOS;
+            document.body.appendChild(iframe);
+
+            setTimeout(function() {
+                window.location = profileWeb;
+            }, 1500);
+        } else if (isAndroid) {
             var start = Date.now();
-            window.location = profileApp;
+            window.location = profileWeb;
 
             setTimeout(function() {
                 if (Date.now() - start < 1200) {
-                    window.location = profileWeb;
+                    window.open(profileWeb, "_blank");
                 }
             }, 1000);
         } else {
