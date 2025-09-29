@@ -9,32 +9,16 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
     }
 
-    var profileWeb = "https://www.linkedin.com/in/" + username;
-    var profileIOS = "linkedin://in/" + username;
+    var linkProfile = "https://www.linkedin.com/in/" + username;
+    // var profileIOS = "linkedin://in/" + username;
 
-    var ua = navigator.userAgent || navigator.vendor || window.opera;
-    var isAndroid = /Android/i.test(ua);
-    var isIOS = /iPhone|iPad|iPod/i.test(ua);
+    // var ua = navigator.userAgent || navigator.vendor || window.opera;
+    // var isAndroid = /Android/i.test(ua);
+    // var isIOS = /iPhone|iPad|iPod/i.test(ua);
 
     linkEl.setAttribute("href", profileWeb);
 
     linkEl.addEventListener("click", function(e) {
-        e.preventDefault();
-
-        if (isIOS) {
-            var iframe = document.createElement("iframe");
-            iframe.style.display = "none";
-            iframe.src = profileIOS;
-            document.body.appendChild(iframe);
-
-            setTimeout(function() {
-                window.location = profileWeb;
-            }, 1500);
-        } else if (isAndroid) {
-            window.location = profileWeb;
-           
-        } else {
-            window.open(profileWeb, "_blank");
-        }
+        window.location = linkProfile;
     });
 });
