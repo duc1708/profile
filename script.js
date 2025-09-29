@@ -11,9 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var profileWeb = "https://www.linkedin.com/in/" + username;
     var profileIOS = "linkedin://in/" + username;
-    var profileAndroid =
-        "intent://in/" + username +
-        "#Intent;package=com.linkedin.android;scheme=https;end";
 
     var ua = navigator.userAgent || navigator.vendor || window.opera;
     var isAndroid = /Android/i.test(ua);
@@ -34,14 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.location = profileWeb;
             }, 1500);
         } else if (isAndroid) {
-            var start = Date.now();
             window.location = profileWeb;
-
-            setTimeout(function() {
-                if (Date.now() - start < 1200) {
-                    window.open(profileWeb, "_blank");
-                }
-            }, 1000);
+           
         } else {
             window.open(profileWeb, "_blank");
         }
